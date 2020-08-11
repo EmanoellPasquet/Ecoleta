@@ -12,10 +12,6 @@ function populateUFs() {
 }
 populateUFs()
 
-function empty() {
-    if ()
-}
-
 
 function getCities(event) {
     const citySelect = document.querySelector("select[name=city]")
