@@ -1,0 +1,23 @@
+{
+  "name": "NLW-Starter",
+  "version": "1.0.0",
+  "description": "Projeto de sistema para cadastro de pontos de coleta seletiva - By Next Level Week - RocketSeat",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmanoellPasquet/Ecoleta-NLW-1.git"
+  },
+  "keywords": [],
+  "author": "Emanoell Pasquet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmanoellPasquet/Ecoleta-NLW-1/issues"
+  },
+  "homepage": "https://github.com/EmanoellPasquet/Ecoleta-NLW-1#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
