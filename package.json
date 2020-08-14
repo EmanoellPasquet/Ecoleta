@@ -4,7 +4,7 @@
   "description": "Projeto de sistema para cadastro de pontos de coleta seletiva - By Next Level Week - RocketSeat",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/EmanoellPasquet/Ecoleta-NLW-1#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
