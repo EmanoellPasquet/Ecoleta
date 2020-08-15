@@ -1,38 +1,68 @@
-@media(max-width:900px) {
-    #page-home {
-        background-position: 70vw;
-    }
-    #page-home .content {
-        align-items: center;
-        text-align: center;
-    }
-    #page-home header a {
-        position: absolute;
-        bottom: 48px;
-        left: 50%;
-        transform: translatex(-50%);
-        
-    }
-    #page-home main {
-        align-items: center;
-    }
 
-    #page-search-results .cardsContainer{
-        grid-template-columns: 1fr;
+@media (max-width: 456px) {
+    #page-create-point .items-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     }
-    #page-search-results .cardsContainer img{
-        height: 230px;
+    #page-create-point .items-grid li{
+    width: 100%;
+    height: auto;
+    }
+  }
+
+@media (max-width: 700px) {
+  #page-create-point .items-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+    #page-create-point form button{
+        width: 100%;
     }
 }
 
-@media (min-width:1700px) {
-    #page-home {
-        background-position-x: 40vw;
-    }
+@media (max-width: 900px) {
+  #page-home {
+    background-position: 70vw;
+  }
+  #page-home .content {
+    align-items: center;
+    text-align: center;
+  }
+  #page-home header a {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+  #page-home main {
+    align-items: center;
+  }
+
+  #page-search-results .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+  #page-search-results .cardsContainer img {
+    height: 230px;
+  }
+  #page-create-point .field-group {
+    flex-direction: column;
+  }
+  #page-create-point .field-group .field + .field {
+    margin-left: 0;
+  }
 }
 
-@media(max-height:760px) {
-    #page-home {
-        background-position-y: 200px;
-    }
+@media (min-width: 1700px) {
+  #page-home {
+    background-position-x: 40vw;
+  }
+}
+
+@media (max-height: 760px) {
+  #page-home {
+    background-position-y: 200px;
+  }
 }
