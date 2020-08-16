@@ -21,7 +21,7 @@
 
   - [:rocket: Technologies Used](#rocket-technologies-used)
   - [:electric_plug: How to make it run](#electric_plug)
-  - [:coffee: Contribute](#:coffee:)
+  - [:coffee: Contribute](#coffee)
 
 
 
