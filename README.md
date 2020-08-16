@@ -21,6 +21,7 @@
 
   - [:rocket: Technologies Used](#rocket-technologies-used)
   - [:electric_plug: How to make it run](#electric_plug)
+  - [:coffee: Contribute](#:coffee:)
 
 
 
@@ -31,7 +32,7 @@
 - [NodeJs](https://nodejs.org/en)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
-- [CSS3](https://developer.mozilla.org/es/docs/Web/CSS)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
 - [SQLite](https://www.sqlite.org/index.html)
 - [Express](https://expressjs.com/es/)
@@ -51,7 +52,7 @@
   
   
   
-## Contribute
+##  :coffee: Contribute
 
 1. Fork this repository (<https://github.com/EmanoellPasquet/Ecoleta-NLW-1/fork>)
 2. Create a new branch for the feature (`git checkout -b feature/"newFeature"`)
