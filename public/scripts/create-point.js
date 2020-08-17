@@ -56,8 +56,10 @@ const collectedItems = document.querySelector("input[name=items]")
 function handleSelectedItem(event) {
   //add or remove a class with JS
   const itemLi = event.target;
-  const itemID = itemLi.dataset.id;
   itemLi.classList.toggle("selected");
+  const itemID = itemLi.dataset.id;
+
+
 
   const alreadySelected = selectedItem.findIndex(item=>{
     const itemExists = item == itemID //true or false
@@ -74,5 +76,6 @@ function handleSelectedItem(event) {
   }else{//if not selected pushes in to the array
     selectedItem.push(itemID)
   }
+
   collectedItems.value = selectedItem
 }

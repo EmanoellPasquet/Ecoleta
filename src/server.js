@@ -10,7 +10,7 @@ server.use(express.static("public"));
 
 // implementing req.body to use method POST
 
-server.use(expre.urlencoded({extended: true}));
+server.use(express.urlencoded({ extended: true }));
 
 //template engine
 const nunjucks = require("nunjucks");
@@ -24,15 +24,15 @@ server.get("/", (req, res) => {
   return res.render("index.html");
 });
 server.get("/create-point", (req, res) => {
-//req.query to get data from the application with GET method (Query String)
+  //req.query to get data from the application with GET method (Query String)
+  console.log(req.query);
 
   return res.render("create-point.html");
 });
 
-server.post("/create-point",(req, res)=>{
-
-//req.body to get data from the application with POST method
-//insert data on db via application
+server.post("/savepoint", (req, res) => {
+  //req.body to get data from the application with POST method
+  //insert data on db via application
 
   const query = `
          INSERT INTO location (
@@ -45,41 +45,45 @@ server.post("/create-point",(req, res)=>{
             items
 
          ) VALUES ( ?, ?, ?, ?, ?, ?, ?);
-            `
+            `;
 
   const values = [
-        req.body.image,
-        req.body.name,
-        req.body.adress,
-        req.body.adress2,
-        req.body.state,
-        req.body.city,
-        req.body.items,
-   ]
-   
-   function AfterInsert(err){
-      if (err) {
-         return console.log(err)
-      }
-      console.log("Sucess!")
-      console.log(this)
-      return res.render("create-point",{saved: true})
-   }
+    req.body.image,
+    req.body.name,
+    req.body.adress,
+    req.body.adress2,
+    req.body.state,
+    req.body.city,
+    req.body.items,
+  ];
 
-   db.run(query, values, AfterInsert)
+  function AfterInsert(err) {
+    if (err) {
+      console.log(err);
+      return res.send("Erro ao cadastrar");
+    }
+    console.log("Success!");
+    console.log(this);
+    return res.render("create-point.html", { saved: true });
+  }
 
-})
+  db.run(query, values, AfterInsert);
+});
 
+//searching data on database
 server.get("/search", (req, res) => {
-  //getting data from database
+  const search = req.query.search;
+  if (search == "") {
+    return res.render("search-results.html", { total: 0 });
+  }
 
-  db.all(`SELECT * FROM location`, function (err, rows) {
+  db.all(`SELECT * FROM location WHERE city LIKE '%${search}%'`, function (err, rows) {
     if (err) {
       return console.log(err);
     }
-    const total = rows.lenght
+    const total = rows.length;
     //show html with data from database
-    return res.render("search-results.html", { location: rows, total });
+    return res.render("search-results.html", { location: rows, total: total });
   });
 });
 

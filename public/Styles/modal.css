@@ -71,3 +71,17 @@ margin-bottom: 8px;
 #modal form button:hover{
    background-color: #2BAA65;
 }
+
+/*modal of register successful*/
+
+#modal.register-success .content{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+}
+
+#modal.register-success h1{
+   margin-top: 38px;
+   color: #FFF;
+}

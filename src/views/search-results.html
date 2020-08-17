@@ -12,28 +12,33 @@
 {% block content %}
     {% include "components/header.html" %}
     <main>
-        {% if total >0 %}
-        <h4>
-            <strong>{{total}} pontos</strong>
-            encontrados</h4>
+        {% if total > 0 %}
+            <h4>
+                <strong>{{total}}
+                    pontos</strong>
+                encontrados</h4>
 
-        <div class="cardsContainer">
-            {% for item in location %}
-                <div class="card">
-                    <img src="{{item.image}}" alt="item.name">
-                    <h1>{{item.name}}</h1>
-                    <h3>{{item.items}}</h3>
-                    <p>{{item.city}},
-                        {{item.state}}
-                        <br/>
-                        {{item.adress}}<br/>
-                        {{item.adress2}}
-                    </p>
-                </div>
-            {% endfor %}
-            {% else %}
-            <h4><strong>Nenhum</strong> local encontrado! :c</h4>
+            <div class="cardsContainer">
+                {% for item in location %}
+                    <div class="card">
+                        <img src="{{item.image}}" alt="item.name">
+                        <h1>{{item.name}}</h1>
+                        <h3>{{item.items}}</h3>
+                        <p>{{item.city}},
+                            {{item.state}}
+                            <br/>
+                            {{item.adress}}<br/>
+                            {{item.adress2}}
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        {%else%}
+
+            <h4>
+                <strong>Nenhum</strong>
+                local encontrado! :c</h4>
         {% endif %}
-        
-        </main>
-    {% endblock content %}
+
+    </main>
+{% endblock content %}

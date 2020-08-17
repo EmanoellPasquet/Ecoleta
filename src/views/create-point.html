@@ -8,11 +8,13 @@
 
 {% block styles %}
     <link rel="stylesheet" href="../Styles/create-point.css">
+    <link rel="stylesheet" href="../Styles/modal.css">
+
 {% endblock styles %}
 
 {% block content %}
     {% include "components/header.html" %}
-    <form action="" method="post">
+    <form action="/savepoint" method="POST">
         <h1>Cadastro do ponto de coleta</h1>
         <fieldset>
             <legend>
@@ -87,7 +89,14 @@
         </fieldset>
         <button type="submit">Cadastrar ponto de coleta</button>
     </form>
+
 {% endblock content %}
+
+{% block modal %}
+    {% if saved %}
+        {% include "components/register-success.html"%}
+    {% endif %}
+{% endblock modal %}
 
 {% block scripts %}
     <script src="../scripts/create-point.js"></script>
