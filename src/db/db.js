@@ -6,7 +6,7 @@ const sqlite3 = require("sqlite3").verbose();
 
 const db = new sqlite3.Database("src/db/database.db");
 
-module.exports = db
+module.exports = db;
 
 //operating db object to manipulate db
 
@@ -68,17 +68,17 @@ module.exports = db
     }
     console.log("Persisted data: ")
     console.log(rows)
- })
+ })*/
 
-  //deleting data
-   /*db.run(`DELETE FROM location WHERE id = ?`, [4], function(err, rows){
-   if (err){
-      return console.log(err)
-     }
-    console.log("Deleted successfully")
-    console.log(rows)
-
-
- } )*/
+//deleting data
+/*for (let i = 1; i < 18; i++) {
+  db.run(`DELETE FROM location WHERE id = ?`, [i], function (err, rows) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log("Deleted successfully");
+    console.log(rows);
+  });
+}*/
 
 //});
