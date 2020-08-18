@@ -1,10 +1,6 @@
 # Ecoleta
 
-![Front-Page da aplicação](./public/assets/1.png)
 
-![Página de cadastro](./public/assets/2.png)
-
-![Página de resultado de buscas](./public/assets/3.png)
 
 
 
@@ -24,7 +20,11 @@
  
  An application that aims to show collection points for specific types of waste, recyclable or not. Made during Next Level Week by [RocketSeat](https://rocketseat.com.br/)
  
- 
+ ![Front-Page da aplicação](./public/assets/1.png)
+
+![Página de cadastro](./public/assets/2.png)
+
+![Página de resultado de buscas](./public/assets/3.png)
 
 # Index
 
