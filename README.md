@@ -1,5 +1,11 @@
 # Ecoleta
 
+![Front-Page da aplicação](./public/assets/1.png)
+
+![Página de cadastro](./public/assets/2.png)
+
+![Página de resultado de buscas](./public/assets/3.png)
+
 
 
  
@@ -9,6 +15,9 @@
   </a>
  <a>
     <img alt="RocketSeat" src="https://img.shields.io/badge/RocketSeat-YES-%23232A7AE4">
+ </a>
+  <a>
+    <img alt="License-MIT" src="https://img.shields.io/badge/License-MIT-red">
  </a>
   <br><br>
 </p>
